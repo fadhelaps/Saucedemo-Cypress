@@ -1,0 +1,22 @@
+{
+  "name": "saucedemo-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open", 
+    "cy:run": "cypress run",
+    "cy:report": "mochawesome-merge cypress/reports/*.json > cypress/reports/report.json && marge cypress/reports/report.json -o cypress/reports/html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "cypress": "^15.8.1",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.1.0",
+    "mochawesome-report-generator": "^6.3.2"
+  }
+}
