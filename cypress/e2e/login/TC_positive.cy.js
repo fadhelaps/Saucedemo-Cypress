@@ -22,12 +22,19 @@ describe('Success login with valid credentilas', () => {
         LoginPage.isInventoryPageDisplayed();
     })
 
-    // it('TC_03_Positive Should login successfully with copy and paste valid username and password', () => {
-    //     LoginPage.clickUsernameFiled();
-    //     LoginPage.pasteUsername('standard_user');
-    //     //assertion
-    //     cy.url().should('include', '/inventory.html');
-    // })
+    it('TC_03_Positive Should login successfully after clear fields and reinput the valid credentials', () => {
+        LoginPage.clickUsernameFiled();
+        LoginPage.inputUsername('standard_user');
+        LoginPage.clickPasswordField();
+        LoginPage.inputPassword('secret_sauce');
+        LoginPage.clearField();
+        LoginPage.clickUsernameFiled();
+        LoginPage.inputUsername('standard_user');
+        LoginPage.clickPasswordField();
+        LoginPage.inputPassword('secret_sauce');
+        LoginPage.clickLoginButton();
+        LoginPage.isInventoryPageDisplayed();
+    })
 
     it('TC_04_Positive Inventory Page still displayed after user success to login and refresh', () => {
         LoginPage.clickUsernameFiled();
