@@ -12,6 +12,7 @@ describe('Success login with valid credentilas', () => {
         LoginPage.inputPassword('secret_sauce');
         LoginPage.clickLoginButton();
         LoginPage.isInventoryPageDisplayed();
+        
     })
 
     it('TC_02_Positive Should login successfully with valid username and password after press Enter key', () => {
