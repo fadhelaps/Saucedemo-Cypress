@@ -25,7 +25,7 @@ Clone the repository and install dependencies:
 
 ## Run Cypress (Interactive Mode)
 this command doesnt generate report
-- npm cypress open
+- npx cypress open
 
 ## Run Cypress (Headless Mode)
 this command generate report
